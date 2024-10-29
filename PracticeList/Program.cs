@@ -17,7 +17,7 @@ namespace PracticeList
             while (true)
             {
                 // Kullanıcıya isim girmesi veya işlemi bitirmesi için talimat veriyoruz
-                Console.WriteLine("Lütfen davet etmek istediğiniz kişilerin isimlerini giriniz (İşleminiz bittiğinde 'q' yazınız): ");
+                Console.Write("Lütfen davet etmek istediğiniz kişilerin isimlerini giriniz (İşleminiz bittiğinde 'q' yazınız): ");
 
                 // Kullanıcının girdiği ismi "invite" değişkenine atıyoruz
                 string invite = Console.ReadLine();
