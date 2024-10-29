@@ -10,27 +10,40 @@ namespace PracticeList
     {
         static void Main(string[] args)
         {
+            // String türünde bir liste oluşturuyoruz; bu listeye davetli isimlerini ekleyeceğiz
             List<string> list = new List<string>();
 
-            while (true) 
+            // Sonsuz bir döngü başlatıyoruz, kullanıcıdan isim almak için
+            while (true)
             {
-                Console.WriteLine("Lütfen davet etmek istediğiniz kişilerin isimlerini giriniz(İşleminiz bittiğinde 'q' yazınız.) : ");
+                // Kullanıcıya isim girmesi veya işlemi bitirmesi için talimat veriyoruz
+                Console.WriteLine("Lütfen davet etmek istediğiniz kişilerin isimlerini giriniz (İşleminiz bittiğinde 'q' yazınız): ");
+
+                // Kullanıcının girdiği ismi "invite" değişkenine atıyoruz
                 string invite = Console.ReadLine();
 
-                if ( invite == "q")
+                // Eğer kullanıcı 'q' yazdıysa döngüden çıkıyoruz
+                if (invite == "q")
                 {
-                    break;
+                    break; // Döngüyü sonlandır
                 }
 
+                // Kullanıcının girdiği ismi listeye ekliyoruz
                 list.Add(invite);
             }
 
-            Console.WriteLine("\nDavetliletin listesi :");
-            foreach (string guests in list)
+            // Davetlilerin listesini ekrana yazdırıyoruz
+            Console.WriteLine("\nDavetlilerin listesi:");
+
+            // Listedeki her ismi tek tek ekrana yazdırmak için foreach döngüsü kullanıyoruz
+            foreach (string guest in list)
             {
-                Console.WriteLine(guests);
+                Console.WriteLine(guest); // Her davetliyi ekrana yazdır
             }
+
+            // Kullanıcı, ekrana basılan listeyi görebilsin diye programın kapanmasını engelliyoruz
             Console.ReadLine();
+
         }
     }
 }
